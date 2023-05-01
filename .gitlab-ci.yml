@@ -4,7 +4,7 @@ stages:
 
 variables:
   IMAGE_REPO_NAMESPACE: rpa_product
-  IMAGE_REPO_NAME: rpa_frontend_console_v2
+  IMAGE_REPO_NAME: console-ui
 
   REPO_NAMESPACE: caojunjie
   REPO_NAME: examples
