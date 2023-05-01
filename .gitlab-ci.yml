@@ -3,7 +3,7 @@ stages:
   - push_frps
 
 variables:
-  IMAGE_REPO_NAMESPACE: global
+  IMAGE_REPO_NAMESPACE: common_testing_tools
   IMAGE_REPO_NAME: console-ui
 
   REPO_NAMESPACE: caojunjie
