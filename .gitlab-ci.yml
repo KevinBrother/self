@@ -3,8 +3,8 @@ stages:
   - push_frps
 
 variables:
-  IMAGE_REPO_NAMESPACE: common_testing_tools
-  IMAGE_REPO_NAME: console-ui
+  IMAGE_REPO_NAMESPACE: ci_runner
+  IMAGE_REPO_NAME: frontend_web
 
   REPO_NAMESPACE: caojunjie
   REPO_NAME: examples
