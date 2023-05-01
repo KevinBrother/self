@@ -29,7 +29,7 @@ build:
     - /^docker-.*$/
   script:
     - cd docker/frp/frps
-    - docker build -t dockerhub.datagrand.com/$IMAGE_REPO_NAMESPACE/$IMAGE_REPO_NAME:$IMAGE_TAG -f build/Dockerfile .
+    - docker build -t dockerhub.datagrand.com/$IMAGE_REPO_NAMESPACE/$IMAGE_REPO_NAME:$IMAGE_TAG .
   allow_failure: false
 
 push:
