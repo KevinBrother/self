@@ -1,0 +1,41 @@
+stages:
+  - build_frps
+  - push_frps
+
+variables:
+  IMAGE_REPO_NAMESPACE: rpa_product
+  IMAGE_REPO_NAME: rpa_frontend_console_v2
+
+  REPO_NAMESPACE: caojunjie
+  REPO_NAME: examples
+  GIT_STRATEGY: none
+
+before_script:
+  - docker login -u $REGISTRY_USER -p $REGISTRY_PWD http://dockerhub.datagrand.com
+  - mkdir $REPO_NAME
+  - cd $REPO_NAME
+  - git init
+  - git remote add origin ssh://git@git.datagrand.com:58422/$REPO_NAMESPACE/$REPO_NAME.git
+  - git fetch --depth=1 origin $CI_COMMIT_SHA
+  - git reset --hard FETCH_HEAD
+  - echo 'commit id full:' $CI_COMMIT_SHA
+  - echo 'commit user:' $GITLAB_USER_NAME
+  - export DATE=$(git log -1 --pretty=format:"%ad" --date=format:'%Y%m%d' $CI_COMMIT_SHA)
+  - export IMAGE_TAG="ci_frps_"_$DATE"_"${CI_COMMIT_SHA:0:7}
+
+build:
+  stage: build_frps
+  only:
+    - /^docker-.*$/
+  script:
+    - docker build -t dockerhub.datagrand.com/$IMAGE_REPO_NAMESPACE/$IMAGE_REPO_NAME:$IMAGE_TAG -f build/Dockerfile .
+  allow_failure: false
+
+push:
+  stage: push_frps
+  only:
+    - /^docker-.*$/
+  script:
+    - docker push dockerhub.datagrand.com/$IMAGE_REPO_NAMESPACE/$IMAGE_REPO_NAME:$IMAGE_TAG
+    - echo '镜像版本:' $IMAGE_TAG
+  allow_failure: false
