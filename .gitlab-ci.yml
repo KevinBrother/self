@@ -21,7 +21,7 @@ before_script:
   - echo 'commit id full:' $CI_COMMIT_SHA
   - echo 'commit user:' $GITLAB_USER_NAME
   - export DATE=$(git log -1 --pretty=format:"%ad" --date=format:'%Y%m%d' $CI_COMMIT_SHA)
-  - export IMAGE_TAG="ci_frps_"_$DATE"_"${CI_COMMIT_SHA:0:7}
+  - export IMAGE_TAG="ci_frps"_$DATE"_"${CI_COMMIT_SHA:0:7}
 
 build:
   stage: build_frps
