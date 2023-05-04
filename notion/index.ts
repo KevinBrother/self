@@ -1,7 +1,6 @@
 import { handleMergeRequest } from './service';
-
-var express = require('express');
-const bodyParser = require('body-parser');
+import express from 'express';
+import bodyParser from 'body-parser';
 var app = express();
 
 // 使用 body-parser 中间件解析请求体

@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Client } from '@notionhq/client';
 
 const notion = new Client({ auth: 'secret_X5qNZfpVbfaJkNYvS6zd6XFnvnfXuRnzco6SHgg1SmM' });

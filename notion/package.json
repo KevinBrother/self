@@ -1,6 +1,7 @@
 {
   "name": "t",
   "scripts": {
+    "build": "ts-node index.ts",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "dev": "bun --watch index.ts"
