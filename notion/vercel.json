@@ -2,8 +2,32 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/index.js",
+      "src": "index.ts",
       "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/item/:slug",
+      "methods": [
+        "GET"
+      ],
+      "dest": "index.ts"
+    },
+    {
+      "src": "/api",
+      "methods": [
+        "POST",
+        "GET"
+      ],
+      "dest": "index.ts"
+    },
+    {
+      "src": "/gitlab-merge-request",
+      "methods": [
+        "POST"
+      ],
+      "dest": "index.ts"
     }
   ]
 }
