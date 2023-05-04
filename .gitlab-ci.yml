@@ -4,7 +4,7 @@ stages:
 
 variables:
   IMAGE_REPO_NAMESPACE: ci_runner
-  IMAGE_REPO_NAME: frontend_web
+  IMAGE_REPO_NAME: console-ui
 
   REPO_NAMESPACE: caojunjie
   REPO_NAME: examples
