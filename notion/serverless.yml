@@ -1,0 +1,16 @@
+component: express
+name: express-avbMgFuNB
+org: '1258675334'
+app: test
+stage: prod
+inputs:
+  src:
+    src: ./
+    hook: npm run build
+    dist: ./
+    exclude:
+      - .env
+      - source
+      - node_modules/**
+  region: ap-guangzhou
+  runtime: Nodejs16.17
