@@ -1,7 +1,7 @@
 import { appendBlock } from './utils';
 
 export async function handleMergeRequest(mergeRequestInfo) {
-  const { user, project, object_attributes } = mergeRequestInfo;
+  const { user = {}, project = {}, object_attributes = {} } = mergeRequestInfo;
   if (user.name === 'caojunjie') {
     // 项目名：project.name
     // 分支名：object_attributes.source_branch
@@ -16,9 +16,13 @@ export async function handleMergeRequest(mergeRequestInfo) {
             type: 'text',
             text: {
               content: `[${project.name}]${object_attributes.title}: ${object_attributes.description}`,
-              link: {
-                url: object_attributes.url
-              }
+              ...(object_attributes.url
+                ? {
+                    link: {
+                      url: object_attributes.url
+                    }
+                  }
+                : {})
             }
           }
         ]
