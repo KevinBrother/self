@@ -4,7 +4,8 @@
     "build": "tsc",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "dev": "bun --watch app.ts"
+    "dev": "ts-node app.ts",
+    "dev:bun": "bun --watch app.ts"
   },
   "devDependencies": {
     "@vercel/node": "^2.14.1",
