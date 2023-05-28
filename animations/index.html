@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .parallax {
+  height: 500px; /* 设置视差滚动区域的高度 */
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.layer-1 {
+  transform: translateZ(-1px) scale(2);
+}
+
+.layer-2 {
+  transform: translateZ(-2px) scale(3);
+}
+
+.layer-3 {
+  transform: translateZ(-3px) scale(4);
+}
+  </style>
+</head>
+<body>
+  <div class="parallax">
+  <div class="parallax-layer layer-1">
+    <img src="https://source.unsplash.com/featured/?dog,beach,running" alt="image">
+  </div>
+  <div class="parallax-layer layer-2">
+    <img src="https://source.unsplash.com/featured/?rain,city,office-building" alt="image">
+  </div>
+  <div class="parallax-layer layer-3">
+    <img src="https://source.unsplash.com/featured/?shark%20struggling%20on%20beach">
+  </div>
+</div>
+<script>
+  let parallax = document.querySelector('.parallax');
+let layers = parallax.querySelectorAll('.parallax-layer');
+
+function moveLayersDependsOnScroll(wScroll) {
+  layers.forEach(layer => {
+    let speed = layer.getAttribute('data-speed');
+    layer.style.transform = `translateY(${wScroll * speed}px)`;
+  });
+}
+
+window.addEventListener('scroll', e => {
+  let wScroll = window.pageYOffset;
+  moveLayersDependsOnScroll(wScroll);
+});
+</script>
+</body>
+</html>

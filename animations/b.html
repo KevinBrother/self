@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Example</title>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .background {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.apple.com.cn/apple-watch-series-8/images/overview/hero/hero_startframe__cj9kegcpluly_large.jpg') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -1;
+        }
+        .background2 {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.apple.com.cn/apple-watch-series-8/images/overview/hero/hero_static__eo06dl4zx1oy_large.jpg') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -2;
+        }
+        .content {
+            position: relative;
+            margin-top: 200px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="background2">
+    </div>
+    <div class="content">
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <h1>Parallax Scrolling Example</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+        <p>Laasdf nec odio.</p>
+        <p>Lorem ipsuasdfing elit. Integer nec odio.</p>
+        <p>Lorem ipsasdfasdfeger nec odio.</p>
+        <!-- Add more content here -->
+    </div>
+    <script>
+        document.addEventListener('scroll', function () {
+            const background = document.querySelector('.background');
+            const scrollPos = window.pageYOffset;
+            background.style.transform = `translateY(-${scrollPos * 0.5}px)`;
+        });
+    </script>
+</body>
+</html>
