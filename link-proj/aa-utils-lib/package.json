@@ -4,7 +4,7 @@
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./esm/index.js",
-  "typings": "./index.d.ts",
+  "typings": "./dist/index.d.ts",
   "scripts": {
     "dev": "echo skip",
     "build": "yarn rm-dist && rollup -c",

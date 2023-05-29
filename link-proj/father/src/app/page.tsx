@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { add } from 'utils-lib';
+import { add } from 'aa-utils-lib';
 
 export default function Home() {
   return (
