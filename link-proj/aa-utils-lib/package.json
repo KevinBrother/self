@@ -1,5 +1,5 @@
 {
-  "name": "utils-lib",
+  "name": "aa-utils-lib",
   "version": "0.0.1",
   "license": "MIT",
   "main": "./dist/index.js",
@@ -35,7 +35,9 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "@types/lodash-es": "^4.17.7",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21"
   },
   "files": [
     "dist",
