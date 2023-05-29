@@ -18,20 +18,7 @@ export default {
     {
       dir: 'dist',
       format: 'cjs'
-    },
-    {
-      dir: 'dist/esm',
-      format: 'esm',
-      preserveModules: true,
-      preserveModulesRoot: 'src'
     }
   ],
-  plugins: [
-    del({ targets: 'dist/*' }),
-    url(),
-    typescript(),
-    resolve(),
-    commonjs(),
-    json()
-  ]
+  plugins: [del({ targets: 'dist/*' }), url(), typescript(), resolve(), commonjs(), json()]
 };

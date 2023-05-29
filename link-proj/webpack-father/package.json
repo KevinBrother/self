@@ -1,0 +1,23 @@
+{
+  "name": "webpack-father",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "bixi dev"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@bixi-design/builder": "3.0.0",
+    "@bixi-design/cli": "3.0.0",
+    "antd": "4.21.5",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4"
+  }
+}
