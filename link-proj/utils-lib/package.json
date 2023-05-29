@@ -1,0 +1,47 @@
+{
+  "name": "utils-lib",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./esm/index.js",
+  "typings": "./index.d.ts",
+  "scripts": {
+    "dev": "echo skip",
+    "build": "yarn rm-dist && rollup -c",
+    "rm-dist": "rm -rf dist",
+    "publish:latest": "yarn build && yarn version:patch && yarn copy-package-to-dist && cd dist && npm publish . --access public",
+    "publish:alpha": "yarn build && yarn version:alpha && yarn copy-package-to-dist && cd dist && npm publish . --access public --tag v1-alpha",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:alpha": "npm version prerelease --no-git-tag-version --preid alpha",
+    "copy-package-to-dist": "node ./helpers/copyAndUpdatePackageJson.mjs"
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.9",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-url": "^7.0.0",
+    "@types/lodash": "^4.14.182",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "eslint": "^8.15.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-storybook": "^0.5.11",
+    "rollup": "^2.72.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "publishConfig": {
+    "registry": "http://repo.datagrand.com/repository/npm-hosted/"
+  }
+}
