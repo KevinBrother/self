@@ -1,4 +1,3 @@
-console.log('This is a popup!');
 const article = document.querySelector('article');
 console.log('%c [ article ]-2', 'font-size:13px; background:pink; color:#bf2c9f;', article);
 
